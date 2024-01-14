@@ -1,0 +1,5 @@
+original text analyzed: SAMPLE_TEXT.txt
+reference model: spacy.load('da_core_news_md')
+corpus reference file: lemma-30k-2017.txt
+output files: SAMPLE_TEXT_missingWords_NLP.txt, SAMPLE_TEXT_identifiedWords_NLP.txt
+analysis conducted on: Sunday, January 14, 2024 - 10:43:59
