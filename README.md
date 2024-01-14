@@ -31,11 +31,13 @@ formatted/output format (three columns, tab separated: part of speech tag, lemma
 
 ### Step 2: analyze text (code: _analyze_text_FLEXIKON.py_)
 inputs: 
-- target text (in .txt format), formatted Flexikon file, frequency corpus file (three colums, tab separated: part of speech tag, lemma, relative frequency).
+- target text (in .txt format)
+- formatted Flexikon file
+- frequency corpus file (three colums, tab separated: part of speech tag, lemma, relative frequency).
 
 outputs: 
 - analysis_summary.txt: includes original text file name, reference files, output files, and date and time analysis was conducted.
-- identified_words.txt: four columns, tab separated; lemma, inflectional form (header conjugation), part of speech, and relative frequency. **Note** that the flexikon pipelline _does not_ automate part of speech tagging for individual words. Instead, the output file lists _all possible parts of speech_ that match a specific word, independent of context. For example, _dansk_ could be an adjective or a noun depending on context: the output will list both options, and you will have to manually choose the correct option in step 3. 
+- identified_words.txt: four columns, tab separated; lemma, inflectional form (header conjugation), part of speech, and relative frequency. **Note** that the flexikon pipeline _does not_ automate part of speech tagging for individual words. Instead, the output file lists _all possible parts of speech_ that match a specific word, independent of context. For example, _dansk_ could be an adjective or a noun depending on context: the output will list both options, and you will have to manually choose the correct option in step 3. 
 - missing_words.txt: list of words that were not identified either in flexikon or corpus.
 
 ### Step 3: manual annotation/checking (code: _annotate_pos_allWords.py_ or _annotate_pos_conflictWords.py_)
@@ -43,7 +45,16 @@ There are two options for manual annotation:
 - **allWords**: user goes word by word and tags all words, including the words with only one possibility for tagging
 - **conflictWords**: user only manually tags words where the text analysis indicated several possible parts of speech; all words with only one identified options are tagged automatically. 
 
-## Processing pipeline for relying on NLP LALALA
+## Processing pipeline for relying on NLP 
+### Step 1: analyze text (code: _analyze_text_NLP.py_)
+inputs: 
+- target text (in .txt format)
+- frequency corpus file (three colums, tab separated: part of speech tag, lemma, relative frequency).
+
+outputs:
+- analysis_summary.txt: includes original text file name, reference files, output files, and date and time analysis was conducted.
+- identified_words.txt: four columns, tab separated; lemma, inflectional form (header conjugation), part of speech, and relative frequency. **Note** NLP pipeline automates part of speech tagging for individual words, but the accuracy of tagging depends on the model performance, _not_ on this code. Thus, for concerns over accuracy refer to documentation and evaluation of performance for specific models.   
+- missing_words.txt: list of words that were not identified either in flexikon or corpus.
 
 
 
