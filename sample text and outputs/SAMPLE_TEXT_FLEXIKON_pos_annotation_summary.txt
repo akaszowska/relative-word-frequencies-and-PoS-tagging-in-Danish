@@ -1,0 +1,4 @@
+original text analyzed: SAMPLE_TEXT.txt
+output file: SAMPLE_TEXT_FLEXIKON_output.csv
+annotation conducted on: Sunday, January 14, 2024 - 14:27:57
+the following annotation was completed manually on all words in the source text.
