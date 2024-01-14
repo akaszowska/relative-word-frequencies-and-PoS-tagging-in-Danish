@@ -21,9 +21,11 @@ Note: Flexikon and Corpus files are **not** included in the repository due to co
 This step needs to be performed only once, and the formatted flexikon file will be used in all subsequent steps. 
 
 original/input format:
+
 ![image](https://github.com/akaszowska/relative-word-frequencies-and-PoS-tagging-in-Danish/assets/48135520/1d010486-55c1-46d3-820f-2fecd12a1022)
 
 formatted/output format (three columns, tab separated: part of speech tag, lemma, inflectional form):
+
 ![image](https://github.com/akaszowska/relative-word-frequencies-and-PoS-tagging-in-Danish/assets/48135520/42af09cf-44a1-4fa7-9805-3f24c6a600ca)
 
 ### Step 2: analyze text (code: _analyze_text_FLEXIKON.py_)
